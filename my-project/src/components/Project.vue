@@ -23,14 +23,23 @@ export default {
 #wyzant {
   background: url('../assets/wyzant-hero.jpg') center right;
   background-size: cover;
+  @media screen and (min-width: 1000px) {
+    height: 350px;
+  }
 }
 #firestone {
   background: url('../assets/firestone-hero.jpg') right center;
   background-size: cover;
+  @media screen and (min-width: 1000px) {
+    height: 250px;
+  }
 }
 #bridgestone {
   background: url('../assets/bridgestone-hero.jpg') center bottom;
   background-size: cover;
+  @media screen and (min-width: 1000px) {
+    height: 350px;
+  }
 }
 #jenis {
   background: url('../assets/jenis-hero.jpg') center center;
@@ -39,6 +48,9 @@ export default {
 #ahs {
   background: url('../assets/humane-society-hero.jpg') center center;
   background-size: cover;
+  @media screen and (min-width: 1000px) {
+    height: 280px;
+  }
 }
 #google {
   background: url('../assets/maps-hero.jpg') center center;
@@ -47,10 +59,20 @@ export default {
 #kotori {
   background: url('../assets/kotori-hero.jpg') center center;
   background-size: cover;
+  @media screen and (min-width: 1000px) {
+    height: 250px;
+  }
+}
+#codepen {
+    background: url('../assets/codepen-hero.jpg') center center;
+    background-size: cover;
+    @media screen and (min-width: 1000px) {
+      height: 350px;
+    }
 }
 figure {
   width: 100%;
-  height: 400px;
+  height: 425px;
   margin: 0;
 }
 figcaption {

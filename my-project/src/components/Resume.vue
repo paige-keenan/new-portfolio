@@ -89,7 +89,6 @@
                 <li>Shopify</li>
                 <li>Orchard</li>
                 <li>Squarespace</li>
-                <li>Unbounce</li>
               </ul>
             </section>
 
@@ -111,6 +110,17 @@
       </main>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    isOpen: {
+      type: Boolean
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 #resume {
   main {
@@ -182,7 +192,7 @@
           right: 0;
           margin: 0 auto;
           width: 20px;
-          height: 4px;
+          height: 2px;
           background: #000;
       }
       &:last-of-type:after {

@@ -18,6 +18,12 @@ export default {
     projectGroup: {
       type: Object,
       required: true
+    },
+    isOpen: {
+      type: Boolean
+    },
+    title: {
+      type: Object
     }
   },
 
@@ -26,7 +32,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
 button {
     width: 100%;
     font-size: 20px;
@@ -39,5 +45,60 @@ button {
     padding: 15px 0 15px 50px;
     border-top: 1px solid #ccc;
     letter-spacing: 1.4px;
+}
+@media screen and (min-width: 680px) {
+    .project-container {
+        position: relative;
+        header {
+            width: 250px;
+        }
+        main {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: calc(100% - 250px);
+            display: flex;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            // align-items: flex-start;
+            align-items: center;
+            // hacky af
+            // TODO: not this.
+            a:first-child {
+                display: none;
+            }
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .project-container {
+        main {
+            padding: 5em 0;
+            a {
+                width: 45%;
+                min-width: 0;
+                margin-right: 1em;
+                margin-bottom: 3em;
+                box-shadow: 0 14px 22px rgba(0, 0, 0, 0), 0 10px 10px rgba(0, 0, 0, 0.17);
+            }
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    .project-container {
+        main {
+            padding: 5em 0;
+            a {
+                width: 350px;
+                min-width: 350px;
+                margin-right: 2em;
+                margin-bottom: 3em;
+            }
+        }
+    }
 }
 </style>

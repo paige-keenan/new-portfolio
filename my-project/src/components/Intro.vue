@@ -13,4 +13,9 @@
 #masthead {
   padding: 50px 1em;
 }
+@media screen and (min-width: 680px) {
+    #masthead {
+        display: none;
+    }
+}
 </style>

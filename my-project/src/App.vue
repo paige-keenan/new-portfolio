@@ -3,8 +3,11 @@
     <intro></intro>
     <main>
       <project-group v-for="projectGroup in projects"
+                     v-bind:class="{ open: isOpen }"
+                     v-on:click="toggleOpen()"
                      :projectGroup="projectGroup"></project-group>
-      <resume></resume>
+      <!-- <resume v-bind:class="{ open: isOpen }"
+              v-on:click="toggleOpen()"></resume> -->
     </main>
   </div>
 </template>
@@ -19,19 +22,29 @@ export default {
     return {
       projects: {
         section1: {
-          sectionName: {title: 'New Work'},
-          project1: {name: 'Wyzant', id: 'wyzant', category: 'Web Development', projectLink: '#'},
-          project2: {name: 'Jeni\'s Splendid Ice Creams', id: 'jenis', category: 'iPhone / Andriod App Development, Design', projectLink: '#'},
-          project3: {name: 'Firestone Tire', id: 'firestone', category: 'Web Development', projectLink: '#'},
-          project4: {name: 'Bridgestone Tire', id: 'bridgestone', category: 'Web Development', projectLink: '#'}
-        },
-        section2: {
-          sectionName: {title: 'Old Work'},
-          project1: {name: 'Atlanta Humane Society', id: 'ahs', category: 'Web Development, Design', projectLink: '#'},
-          project2: {name: 'Google Maps / Bandsintown API Integration ', id: 'google', category: 'Web Development', projectLink: '#'},
-          project3: {name: 'Kotori', id: 'kotori', category: 'Web Game Development', projectLink: '#'}
+          sectionName: {title: 'Work'},
+          project1: {name: 'Wyzant', id: 'wyzant', category: 'Web Development', tagged: 'product', projectLink: '#'},
+          project2: {name: 'Jeni\'s Splendid Ice Creams', id: 'jenis', category: 'iPhone / Android App Development | Design', projectLink: '#'},
+          project3: {name: 'Firestone Tire', id: 'firestone', category: 'Web Development', tagged: 'client', projectLink: '#'},
+          project4: {name: 'Bridgestone Tire', id: 'bridgestone', category: 'Web Development', tagged: 'client', projectLink: '#'},
+          project5: {name: 'Atlanta Humane Society', id: 'ahs', category: 'Web Development | Design', tagged: 'student', projectLink: '#'},
+          project6: {name: 'Google Maps / Bandsintown API Integration ', id: 'google', category: 'Web Development', tagged: 'student', projectLink: '#'},
+          project7: {name: 'Kotori', id: 'kotori', category: 'Web Game Development', tagged: 'student', projectLink: '#'},
+          project8: {name: 'Codepen Projects', id: 'codepen', category: 'Web Development | Design', tagged: 'student', projectLink: '#'}
         }
-      }
+        // section2: {
+        //   sectionName: {title: 'Old Work'},
+        //   project1: {name: 'Atlanta Humane Society', id: 'ahs', category: 'Web Development | Design', projectLink: '#'},
+        //   project2: {name: 'Google Maps / Bandsintown API Integration ', id: 'google', category: 'Web Development', projectLink: '#'},
+        //   project3: {name: 'Kotori', id: 'kotori', category: 'Web Game Development', projectLink: '#'}
+        // }
+      },
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleOpen: function () {
+      this.isOpen = !this.isOpen
     }
   },
   components: {
