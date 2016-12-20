@@ -70,6 +70,7 @@ button {
             }
             a {
                 width: 100%;
+                box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .5);
             }
         }
     }
@@ -83,7 +84,8 @@ button {
                 min-width: 0;
                 margin-right: 1em;
                 margin-bottom: 3em;
-                box-shadow: 0 14px 22px rgba(0, 0, 0, 0), 0 10px 10px rgba(0, 0, 0, 0.17);
+                // box-shadow: 0 14px 22px rgba(0, 0, 0, 0), 0 10px 10px rgba(0, 0, 0, 0.17);
+
             }
         }
     }
